@@ -14,6 +14,14 @@ model users {
   id      Int       @id @default(autoincrement())
   email   String    @unique
   phone   String    @unique
+  Role    String
+  Avatar  String
+  Locale  String
+  Email_Validated Boolean
+  Phone_Validated Boolean
+  Password_Hash String
+  Platform  String
+  Platform_User String
   name    String?
   orders  orders[]
   reviews reviews[]
