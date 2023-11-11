@@ -1,4 +1,5 @@
 import { faker } from '@faker-js/faker';
+const { db, pgp } = require('./database'); // Replace with your own database configuration
 import type { SexType } from '@faker-js/faker';
 
 
