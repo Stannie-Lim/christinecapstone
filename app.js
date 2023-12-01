@@ -1,20 +1,13 @@
-import _usersModel from './users.model'; 
-const express = require('express');
-const bodyParser = require('body-parser');
+const express = require("express");
 const app = express();
-const routes = require("./routes.js");
+const { PrismaClient } = require("@prisma/client");
 
+const prisma = new PrismaClient();
 
-app.use("/api/orderitems, require(.routes/API/orderitems)");
-app.use("/api/orders, require(.routes/API/orders)");
-app.use("/api/products, require(.routes/API/products)");
-app.use("/api/reviews, require(.routes/API/reviews)");
-app.use("/api/users, require(.routes/API/users)");
-
-
-
-
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
+app.get("/categories", async (req, res, next) => {
+  res.send(await prisma.categories.findMany());
 });
 
+app.listen(3000, () => {
+  console.log("Server is running on port 3000");
+});
