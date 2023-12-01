@@ -1,21 +1,19 @@
-# Under-the-Tree
-	by Jesus Moo, Christine Velez and Jeffrey Gaitan
+steps to get back on track
+1. seed a bunch of products (maybe like 50 idk, make sure you use a for loop, dont actually write 50 lines of code to seed data)
+2. make an api route to serve the products route (use express router, dont just put the route in your app.js. put the route in its own file, export it, import it in your app.js)
+3. on your frontend, fetch all the products and display it on your homepage
+3.5. login/register/logout. authentication part
+4. on your frontend, create a "add to cart" button for each product
+5. when clicking on the button, make a call to your backend to put the product in your cart
+6. on your backend, make a route to allow for putting product into cart. make sure it gets put into the database. you should be thinking about quantity (like adding item X 5 times should not have 5 X in your cart. it should have 1 X but have a quantity of 5)
+7. on frontend, create a view to see everything in your cart. dont even think about modifying cart for now, just display the cart
+8. in the cart view, create a checkout button. it should bring you to another view that allows user to put in card information
+9. it should have a "purchase" button. after that, the cart should become an order. maybe you can redirect to confirmation page
+10. modify cart? like remove item from cart, decrement quantity, increment quantity
+11. anything past here is just flex features
+12. https://youtu.be/-vIOlK3w_8I cheat code
 
-## The purpose
-Under the Tree is a ecommerce website for christmas, at the current moment the plan is to make the average ecommerce features (payment processing, Product searching, Great visuals)
-
-### Specs
-#### Base  Frameworks (Planned and currently using)
-These are frameworks / Technologies that we either are planning on using or are currently using. Please note that this information may change as we may change frameworks in future development.
-- PostGrestSQL (Prisma)
-- React.Js for visuals
-- Pagination
-- Backend Pagination
-- Faker.JS
-
-Below is our current Database Schema.
-![Database_Schema](/Readme_Content/Database_Schema_Image.png)
-
+---
 
 1. move routes/api out of the prisma folder. prisma folder should only hold db stuff
 2. when i clone, npm i and npx prisma migrate whatever, and maybe npm run seed, everything should just run fully (no error msgs, no errors or anything)
